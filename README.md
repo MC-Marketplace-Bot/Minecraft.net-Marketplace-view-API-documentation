@@ -2,7 +2,8 @@
 
 ## API Endpoints
 
-All requests are GET requests.
+➡️ **All requests are GET requests.**
+
 | Endpoint | Description | Requirements | Status Codes |
 |-|-|-|-|
 `/bin/minecraft/productmanagement.productsinfobytype.json`| Returns items with the same type provided | locate, type | 200 OK, 404 Not Found
@@ -44,11 +45,17 @@ All requests are GET requests.
 
 ### Examples
 
-Shows the first 99 skin packs:
+**Shows the first 99 skin packs:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.productsinfobytype.json?type=skinpack&locale=en-us&limit=100&skip=0>
 
-Shows the first 119 items and doesnt show the first 20:
+**Shows the first 119 items and doesnt show the first 20:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.productsinfobytype.json?type=skinpack&locale=en-us&limit=100&skip=20>
 
-Current front page:
+**Current front page:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.promotiondetails.json?locale=en-us>
+
+**Search:**
+<https://www.minecraft.net/bin/minecraft/productmanagement.autosuggest.json?locale=en-us&term=help>
+
+**Free items:**
+<https://www.minecraft.net/bin/minecraft/productmanagement.freeproducts.json?locale=en-us>
