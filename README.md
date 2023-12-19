@@ -10,10 +10,10 @@ All requests are GET requests.
 `/bin/minecraft/productmanagement.promotiondetails.json`| Returns the current front page items of the Marketplace | locale | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.autosuggest.json`| Returns Marketplace items based on the search term | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.freeproducts.json`| Returns free Marketplace items | locate | 200 OK, 404 Not Found
-`/bin/minecraft/productmanagement.filterproduct.json`| Unknown | locate, creatorId (search term) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.productsbydescrpition.json`| Returns Marketplace items based on the search term (description based) | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
-`/bin/minecraft/productmanagement.saleproducts.json`| Unknown | locate, id (promotion ID) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.uuiddata.json`| Returns an item based an uuid from packIdentity | locate, uuid (uuid from the packIdentity property), type (required but can set to anything) | 200 OK, 404 Not Found
+`/bin/minecraft/productmanagement.filterproduct.json`| Unknown | locate, creatorId (search term) | 200 OK, 404 Not Found
+`/bin/minecraft/productmanagement.saleproducts.json`| Unknown | locate, id (promotion ID) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.categorydata.json`| Unknown | locate, id, category | 200 OK, 404 Not Found
 
 ### Query Strings
@@ -44,10 +44,10 @@ All requests are GET requests.
 
 ### Examples
 
-shows the first 99 skin packs:
+Shows the first 99 skin packs:
 <https://www.minecraft.net/bin/minecraft/productmanagement.productsinfobytype.json?type=skinpack&locale=en-us&limit=100&skip=0>
 
-shows the first 119 items and doesnt show the first 20:
+Shows the first 119 items and doesnt show the first 20:
 <https://www.minecraft.net/bin/minecraft/productmanagement.productsinfobytype.json?type=skinpack&locale=en-us&limit=100&skip=20>
 
 Current front page:
