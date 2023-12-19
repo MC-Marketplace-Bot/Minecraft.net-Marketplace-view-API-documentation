@@ -2,6 +2,7 @@
 
 ## API Endpoints
 
+All requests are GET requests.
 | Endpoint | Description | Requirements | Status Codes |
 |-|-|-|-|
 `/bin/minecraft/productmanagement.productsinfobytype.json`| Returns items with the same type provided | locate, type | 200 OK, 404 Not Found
@@ -40,3 +41,14 @@
 - **survival_spawn_world** (Survival Spawns)
 - **bundle** (Bundles)
 - **genre.educational** (Educational content)
+
+### Examples
+
+shows the first 99 skin packs:
+<https://www.minecraft.net/bin/minecraft/productmanagement.productsinfobytype.json?type=skinpack&locale=en-us&limit=100&skip=0>
+
+shows the first 119 items and doesnt show the first 20:
+<https://www.minecraft.net/bin/minecraft/productmanagement.productsinfobytype.json?type=skinpack&locale=en-us&limit=100&skip=20>
+
+Current front page:
+<https://www.minecraft.net/bin/minecraft/productmanagement.promotiondetails.json?locale=en-us>
