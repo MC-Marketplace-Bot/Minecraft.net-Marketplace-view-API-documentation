@@ -12,11 +12,11 @@
 `/bin/minecraft/productmanagement.productsbydescrpition.json`| (They misspelled description) Returns Marketplace items based on the search term, description based | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.uuiddata.json`| Returns an item based an uuid from packIdentity | locate, uuid (UUID from the packIdentity property), type (required but can set to anything) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.categorydata.json`| Returns all of the items from a specific category | locate, category | 200 OK, 404 Not Found
-`/bin/minecraft/productmanagement.filterproduct.json`| Shows all the items for a specific creator | locate, creatorId (Creator name), limit, skip | 200 OK, 404 Not Found, 500
+`/bin/minecraft/productmanagement.filterproduct.json`| Shows all the items for a specific creator | locate, creatorId (Creator name), limit, skip | 200 OK, 404 Not Found, 500 Invalid Input
 `/bin/minecraft/productmanagement.promotiondetails.json`| Returns the current front page items of the Marketplace | locale | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.mostpopproducts.json`| Returns the current most popular item | locate | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.freeproducts.json`| Returns free Marketplace items | locate | 200 OK, 404 Not Found
-`/bin/minecraft/productmanagement.saleproducts.json`| Unknown | locate, id (Has to be an array, promotion ID/ETag property) | 200 OK, 404 Not Found, 500
+`/bin/minecraft/productmanagement.saleproducts.json`| Unknown | locate, id (Has to be an array, promotion ID/ETag property) | 200 OK, 404 Not Found, 500 Invalid Input
 
 ### Query Strings
 
