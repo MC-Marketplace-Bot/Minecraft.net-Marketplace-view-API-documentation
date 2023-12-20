@@ -16,7 +16,7 @@
 `/bin/minecraft/productmanagement.promotiondetails.json`| Returns the current front page items of the Marketplace | locale | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.mostpopproducts.json`| Returns the current most popular item | locate | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.freeproducts.json`| Returns free Marketplace items | locate | 200 OK, 404 Not Found
-`/bin/minecraft/productmanagement.saleproducts.json`| Unknown | locate, id (Has to be an array, promotion ID/ETag property) | 200 OK, 404 Not Found, 500 Invalid Input
+`/bin/minecraft/productmanagement.saleproducts.json`| (Disabled) Shows the current active sales | locate, id (Has to be an array, promotion ID/ETag property) | 200 OK, 404 Not Found, 500 Invalid Input
 
 ### Query Strings
 
