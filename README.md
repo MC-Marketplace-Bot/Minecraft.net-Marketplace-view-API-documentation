@@ -3,13 +3,14 @@
 ## API Endpoints
 
 ➡️ **All requests are GET requests.**
+➡️ **The user-agent header is REQUIRED and the minimal is browser/version for example Firefox/86.**
 
 | Endpoint | Description | Requirements | Status Codes |
 |-|-|-|-|
 `/bin/minecraft/productmanagement.productdetails.json`| Returns the item details of the provided item id | id (Item ID) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.autosuggest.json`| Returns Marketplace items based on the search term | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.productsinfobytype.json`| Returns items with the same type provided | locate, type | 200 OK, 404 Not Found
-`/bin/minecraft/productmanagement.productsbydescrpition.json`| (They misspelled description) Returns Marketplace items based on the search term, description based | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
+`/bin/minecraft/productmanagement.productsbydescrpition.json`| (They misspelled description) Returns Marketplace items based on the search term, description based | locate, term (not required but always null if not there), limit (If no limit, the request returns the same item everytime) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.uuiddata.json`| Returns an item based an uuid from packIdentity | locate, uuid (UUID from the packIdentity property), type (required but can set to anything) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.categorydata.json`| Returns all of the items from a specific category | locate, category | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.filterproduct.json`| Shows all the items for a specific creator | locate, creatorId (Creator name), limit, skip | 200 OK, 404 Not Found, 500 Invalid Input
@@ -62,7 +63,7 @@
 <https://www.minecraft.net/bin/minecraft/productmanagement.autosuggest.json?locale=en-us&term=help>
 
 **Search by description:**
-<https://www.minecraft.net/bin/minecraft/productmanagement.productsbydescrpition.json?locale=en-us&term=help>
+<https://www.minecraft.net/bin/minecraft/productmanagement.productsbydescrpition.json?locale=en-us&term=help&limit=10>
 
 **Creator search:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.filterproduct.json?limit=10&creatorId=Yeggs&locale=en-us&skip=0>
