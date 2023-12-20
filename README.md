@@ -3,6 +3,7 @@
 ## API Endpoints
 
 ➡️ **All requests are GET requests.**
+
 ➡️ **The user-agent header is REQUIRED and the minimal is browser/version for example Firefox/86.**
 
 | Endpoint | Description | Requirements | Status Codes |
