@@ -11,11 +11,7 @@
 `/bin/minecraft/productmanagement.promotiondetails.json`| Returns the current front page items of the Marketplace | locale | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.autosuggest.json`| Returns Marketplace items based on the search term | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.freeproducts.json`| Returns free Marketplace items | locate | 200 OK, 404 Not Found
-<<<<<<< HEAD
-`/bin/minecraft/productmanagement.productsbydescrpition.json`| (They misspelled description) Returns Marketplace items based on the search term, description based | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
-=======
-`/bin/minecraft/productmanagement.productsbydescrpition.json`| Returns Marketplace items based on the search term (description based) | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
->>>>>>> parent of c3a9cf1 (Fix spelling error in endpoint)
+`/bin/minecraft/productmanagement.productsbydescription.json`| Returns Marketplace items based on the search term (description based) | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.uuiddata.json`| Returns an item based an uuid from packIdentity | locate, uuid (uuid from the packIdentity property), type (required but can set to anything) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.filterproduct.json`| Unknown | locate, creatorId (search term) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.saleproducts.json`| Unknown | locate, id (promotion ID) | 200 OK, 404 Not Found
