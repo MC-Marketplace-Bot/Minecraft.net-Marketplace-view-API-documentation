@@ -45,6 +45,9 @@
 
 ### Examples
 
+**Search by description:**
+<https://www.minecraft.net/bin/minecraft/productmanagement.productsbydescrpition.json?locale=en-us&term=help>
+
 **Shows the first 99 skin packs:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.productsinfobytype.json?type=skinpack&locale=en-us&limit=100&skip=0>
 
