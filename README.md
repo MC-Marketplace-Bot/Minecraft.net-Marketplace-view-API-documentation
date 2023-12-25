@@ -9,7 +9,7 @@
 | Endpoint | Description | Requirements | Status Codes |
 |-|-|-|-|
 `/bin/minecraft/productmanagement.productdetails.json`| Returns the item details of the provided item id | id (Item ID) | 200 OK, 404 Not Found
-`/bin/minecraft/productmanagement.autosuggest.json`| Returns Marketplace items based on the search term | locate, term (not required but always null if not there) | 200 OK, 404 Not Found
+`/bin/minecraft/productmanagement.autosuggest.json`| Returns Marketplace items based on the search term | locate, term (Not required but always null if not there) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.productsinfobytype.json`| Returns items with the same type provided | locate, type | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.productsbydescrpition.json`| (They misspelled description) Returns Marketplace items based on the search term, description based | locate, term (not required but always null if not there), limit (If no limit, the request returns the same item everytime) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.uuiddata.json`| Returns an item based an uuid from packIdentity | locate, uuid (UUID from the packIdentity property), type (Required, but can be set to any value without affecting the result) | 200 OK, 404 Not Found
@@ -26,13 +26,13 @@
 
 - **type** (Item type)
 
-- **limit** (Number of items to view | the number of items are one less than the input | defaults to 10)
+- **limit** (Number of items to view | the number of items are one less than the input | Defaults to 10 or 4 depending on the endpoint)
 
-- **skip** (Skip the first items | defaults to 0)
+- **skip** (Skip the first items | Defaults to 0)
 
 - **currentDate** (ISO date format)
 
-- **term** (Search term | defaults to null)
+- **term** (Search term | Defaults to null)
 
 ### Possible Types
 
@@ -82,4 +82,4 @@
 <https://www.minecraft.net/bin/minecraft/productmanagement.promotiondetails.json?locale=en-us>
 
 **Free items:**
-<https://www.minecraft.net/bin/minecraft/productmanagement.freeproducts.json?locale=en-us>
+<https://www.minecraft.net/bin/minecraft/productmanagement.freeproducts.json?locale=en-us&limit=25>
