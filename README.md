@@ -26,18 +26,19 @@
 
 - **type** (Item type)
 
-- **limit** (Number of items to view | the number of items are one less than the input | Defaults to 10 or 4 depending on the endpoint)
+- **limit** (Number of items to view | The number of items are one less than the input | Defaults to 10 or 4 depending on the endpoint)
 
 - **skip** (Skip the first items | Defaults to 0)
 
 - **currentDate** (ISO date format)
 
-- **term** (Search term | Defaults to null)
+- **term** (Search term | Defaults to "null")
 
 ### Possible Types
 
 - **all** (Most Popular)
 - **resourcepack** (Texture Packs)
+- **addon** (Add-ons)
 - **mashup** (Mash-ups)
 - **skinpack** (Skin Packs)
 - **mini_game_world** (Mini Games)
@@ -50,6 +51,7 @@
 
 - **Most Popular Minecraft Skins**
 - **Most Popular Minecraft Resources**
+- **Most Popular Minecraft Add-ons**
 - **Most Popular Minecraft Mash-ups**
 - **Most Popular Adventure**
 - **Most Popular Minigames**
