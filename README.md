@@ -8,17 +8,17 @@
 
 | Endpoint | Description | Requirements | Status Codes |
 |-|-|-|-|
-`/bin/minecraft/productmanagement.productdetails.json`| Returns the item details of the provided item id | id (Item ID) | 200 OK, 404 Not Found
+`/bin/minecraft/productmanagement.productdetails.json`| Returns the item details of the provided item ID | id (Item ID) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.autosuggest.json`| Returns Marketplace items based on the search term | locate, term (Not required but always null if not there) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.productsinfobytype.json`| Returns items with the same type provided | locate, type | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.productsbydescrpition.json`| (They misspelled description) Returns Marketplace items based on the search term, description based | locate, term (not required but always null if not there), limit (If no limit, the request returns the same item everytime) | 200 OK, 404 Not Found
-`/bin/minecraft/productmanagement.uuiddata.json`| Returns an item based an uuid from packIdentity | locate, uuid (UUID from the packIdentity property), type (Required, but can be set to any value without affecting the result) | 200 OK, 404 Not Found
+`/bin/minecraft/productmanagement.uuiddata.json`| Returns an item based an UUID from packIdentity | locate, uuid (UUID from the packIdentity property), type (Required, but can be set to any value without affecting the result) | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.categorydata.json`| Returns all of the items from a specific category | locate, category | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.filterproduct.json`| Shows all the items for a specific creator | locate, creatorId (Creator name), limit, skip | 200 OK, 404 Not Found, 500 Invalid Input
-`/bin/minecraft/productmanagement.promotiondetails.json`| Returns the current front page items of the Marketplace | locale | 200 OK, 404 Not Found
+`/bin/minecraft/productmanagement.promotiondetails.json`| Returns the current promotioned items if available | locale | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.mostpopproducts.json`| Returns the current most popular item | locate | 200 OK, 404 Not Found
 `/bin/minecraft/productmanagement.freeproducts.json`| Returns free Marketplace items | locate | 200 OK, 404 Not Found
-`/bin/minecraft/productmanagement.saleproducts.json`| (Disabled) Shows the current active sales | locate, id (Has to be an array, promotion ID/ETag property) | 200 OK, 404 Not Found, 500 Invalid Input
+`/bin/minecraft/productmanagement.saleproducts.json`| Returns the sale details of the provided item ID | locate, id (item IDs seperated by ",") | 200 OK, 404 Not Found, 500 Invalid Input
 
 ### Query Strings
 
@@ -49,6 +49,7 @@
 
 ### Possible Categories
 
+- **Newly Added**
 - **Most Popular Minecraft Skins**
 - **Most Popular Minecraft Resources**
 - **Most Popular Minecraft Add-ons**
@@ -61,6 +62,9 @@
 
 **Get item details:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.productdetails.json?id=8500d60c-bf43-48dd-b6e9-a97cb35e41f8>
+
+**Get item details with sale info for two items:**
+<https://www.minecraft.net/bin/minecraft/productmanagement.saleproducts.json?locale=en-us&id=3fc4615d-6813-440c-8444-eafc621846f5,527c6522-2f1d-40ca-b807-87ad8e354211>
 
 **Search:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.autosuggest.json?locale=en-us&term=help>
@@ -79,9 +83,6 @@
 
 **Category search:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.categorydata.json?locale=en-us&category=Most%20Popular%20Minecraft%20Skins>
-
-**Current front page:**
-<https://www.minecraft.net/bin/minecraft/productmanagement.promotiondetails.json?locale=en-us>
 
 **Free items:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.freeproducts.json?locale=en-us&limit=25>
