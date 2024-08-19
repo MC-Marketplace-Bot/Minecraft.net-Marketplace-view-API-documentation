@@ -75,10 +75,10 @@
 **Creator search:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.filterproduct.json?limit=10&creatorId=Yeggs&locale=en-us&skip=0>
 
-**Shows the first 99 skin packs:**
+**Shows the first 100 skin packs:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.productsinfobytype.json?type=skinpack&locale=en-us&limit=100&skip=0>
 
-**Shows the first 119 items and doesnt show the first 20:**
+**Shows the first 120 items and doesnt show the first 20:**
 <https://www.minecraft.net/bin/minecraft/productmanagement.productsinfobytype.json?type=skinpack&locale=en-us&limit=100&skip=20>
 
 **Category search:**
