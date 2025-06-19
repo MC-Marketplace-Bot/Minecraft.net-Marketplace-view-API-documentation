@@ -1,5 +1,7 @@
 # Minecraft.net Marketplace view API documentation
 
+**The API endpoints currently listed are outdated due to a Mojang migration to a different service, this documentation will be updated with the new endpoints at a later date.**
+
 ## API Endpoints
 
 ➡️ **All requests are GET requests.**
